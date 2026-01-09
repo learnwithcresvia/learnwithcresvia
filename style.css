@@ -1,0 +1,175 @@
+/* Professional Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #2563eb;
+    --secondary: #1e293b;
+    --background: #f8fafc;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --text: #334155;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+header span {
+    color: var(--primary);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--secondary);
+}
+
+.card p {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #64748b;
+}
+
+/* Code block */
+pre {
+    background: #0f172a;
+    color: #e5e7eb;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+/* Buttons */
+button {
+    background: var(--primary);
+    border: none;
+    padding: 10px 22px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 160px;
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-family: monospace;
+}
+
+/* Status */
+#result, #score {
+    margin-top: 16px;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+#result {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+#result:contains("✅") {
+    color: green;
+}
+
+#errorCode span {
+    background-color: #fee2e2; /* light red */
+    color: #b91c1c; /* dark red text */
+    font-weight: bold;
+}
+
+/* Error box styling */
+#errorBox {
+    background-color: #ffffff;   /* WHITE background */
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Error text */
+#errorCode {
+    font-family: monospace;
+    font-size: 14px;
+    color: #f1f2f4;
+}
+
+
+
