@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Container layout */
+        .practice-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        /* Code editor area */
+        .editor-section {
+            flex: 2;
+        }
+
+        textarea {
+            width: 100%;
+            height: 180px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 14px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #ffffff; /* white background */
+            color: #0f0f0f;
+        }
+
+                /* Right-side feedback panel */
+        .feedback-section {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 14px;
+        }
+
+        /* Error box */
+        #errorBox {
+            background-color: #ffffff;   /* force white */
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        /* IMPORTANT: override <pre> dark theme */
+        #errorCode {
+            background-color: #ffffff !important;
+            color: #111827;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        /* Exact error highlight */
+        .error-highlight {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            font-weight: 600;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+
+
+
+        #hint {
+            color: #d97706;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<header>
+    <h1>Practice</h1>
+</header>
+
+<p>Write a program to print <b>Hello</b></p>
+
+<div class="practice-container">
+    <!-- Code Editor -->
+    <div class="editor-section">
+        <textarea id="userCode" placeholder="Write your code here..."></textarea>
+        <p><b>Expected Output:</b></p>
+        <pre>Hello</pre>
+        <button onclick="checkCode()">Submit</button>
+        <button onclick="goToQuiz()">Next → Quiz</button>
+        <p id="result" style="font-weight:600;"></p>
+    </div>
+
+    <!-- Feedback Section -->
+    <div class="feedback-section" id="feedback" style="display:none;">
+    <p id="hint"><b>Hint:</b></p>
+    <div id="errorBox" style="display:none;">
+        <p><b>Error Highlight:</b></p>
+        <pre id="errorCode"></pre>
+    </div>
+</div>
+
+
+</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
