@@ -1,0 +1,96 @@
+.coding-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.timer-badge {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+.coding-layout {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  flex-wrap: wrap; /* responsive */
+}
+
+.left-panel {
+  flex: 1 1 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right-panel {
+  flex: 1 1 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Editor Box */
+.CodeMirror {
+  height: 320px;
+}
+
+/* Editor Buttons */
+.editor-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Output Box */
+.right-panel pre {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  white-space: pre-wrap; /* wrap lines, no horizontal scroll */
+  word-break: break-word;
+}
+
+/* Hint Box */
+.hint-box {
+  background: #fff3cd;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+/* Expected Output */
+.expected-box {
+  background: #e8f0fe;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+/* Success Box */
+.success-box {
+  background: #d4edda;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .coding-layout {
+    flex-direction: column;
+  }
+}
